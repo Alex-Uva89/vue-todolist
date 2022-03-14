@@ -2,10 +2,12 @@ const app = new Vue({
     el:'#js-root',
     data:{
         newTodo: '',
+        idArray: 0,
         todos: [
             {
                 name: 'Esempio prova',
-                condition: 'true', 
+                isDone: false, 
+                id: 0,
             },
             
         ]
@@ -15,9 +17,15 @@ const app = new Vue({
             this.todos.splice(element, 1);
         },
         addTodo(){
-            let new = { name: { value: 'NewTodo' } });
-            this.todos.unshift(this.newTodo);
+            this.idArray++
+            const newObjTodo = { name: this.newTodo , isDone: false, id: this.idArray };
+            this.todos.unshift(newObjTodo);
             this.newTodo = '';
+        },
+        toggle(element){
+            // this.todos[index].isDone = true;
+            // console.log(this.todos[index].isDone);
+            element.isDone = true;
         }
     }
 

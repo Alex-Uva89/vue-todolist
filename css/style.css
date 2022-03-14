@@ -4,10 +4,27 @@
     box-sizing: border-box;
 }
 
+.head-title{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: rgb(18, 197, 152);
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.main-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 .todo-input-container{
     max-width: 500px;
-    height: 6rem;
+    height: 5rem;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -31,23 +48,39 @@
     border-radius: 1rem;
 }
 
+.container-decor{
+    width: 800px;
+    min-height: calc(100vh - 8rem);
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../img/free-texture-fogli-block-notes-L-TYuCTr.jpg);
+    background-size: cover;
+    border-radius: 1rem;
+}
+
 .todo-output-container{
     max-width: 700px;
     margin: 0 auto;
-    background-color: rgb(180, 178, 178);
-    border-radius: .5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 1rem;
+    border: 3px solid black;
 }
 
-.todo-output-container:hover{
+.todo-item:hover{
     background-color: gray;
 }
 
 .todo-item{
+    width: 90%;
     height: 2rem;
+    margin: 0 auto 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
+    border: 2px solid white;
+    background-color: rgb(180, 178, 178);
+    border-radius: .5rem;
 }
 
 .todo{
@@ -61,4 +94,8 @@
     padding: .3rem;
     background-color: transparent;
     border: none;
+}
+
+.check{
+    text-decoration: line-through;
 }

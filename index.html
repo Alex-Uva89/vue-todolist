@@ -12,17 +12,25 @@
 <body>
     <div id="js-root">
 
-        <div class="todo-input-container">
-            <input v-model="newTodo" type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo" size="1">
-            <button @click="addTodo()" class="todo-btn">Aggiugngi</button>
-        </div>
+        <section class="head-title">
+            <h1 class="title">&#x2802;&#x2802;&#x2802;ToDo List &#x2802;&#x2802;&#x2802;</h1>
+        </section>
 
-        <ul class="todo-output-container">
-            <li v-for="(element, index) in todos" class="todo-item">
-                <div class="todo"> {{ todos[index].name }} </div>
-                <button @click="delteTodo(element)" class="delete-output">x</button>
-            </li>
-        </ul>
+        
+        <div class="todo-input-container">
+            <input v-model="newTodo" @keyup.enter="addTodo" type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo" size="1">
+            <button @click="addTodo()"  class="todo-btn">Aggiugngi</button>
+        </div>
+        
+        <div class="container-decor">
+            <ul class="todo-output-container">
+                <li v-for="(element, index) in todos" class="todo-item">
+                    <div @click="toggle(element)" :class="element.isDone ? 'check' : ''" class="todo"> {{ todos[index].id +' - '+ todos[index].name }} </div>
+                    <button @click="delteTodo(element)" class="delete-output">x</button>
+                </li>
+            </ul>
+        </div>
+        
 
     </div>
     
