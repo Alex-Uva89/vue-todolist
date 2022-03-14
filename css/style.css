@@ -6,7 +6,7 @@
 
 
 .todo-input-container{
-    max-width: 600px;
+    max-width: 500px;
     height: 6rem;
     margin: 0 auto;
     display: flex;
@@ -29,4 +29,29 @@
     padding: .5rem;
     border: 2px solid black;
     border-radius: 1rem;
+}
+
+.todo-output-container{
+    max-width: 700px;
+    height: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(180, 178, 178);
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.todo-output-container:hover{
+    background-color: gray;
+}
+
+.todo{
+    margin-left: 10px;
+}
+
+
+.delete-output{
+    margin-right: 20px;
 }
