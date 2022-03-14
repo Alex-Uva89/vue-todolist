@@ -13,14 +13,16 @@ const app = new Vue({
         ]
     },
     methods: {
-        delteTodo(element){
-            this.todos.splice(element, 1);
+        delteTodo(index){
+            this.todos.splice(index, 1);
         },
         addTodo(){
-            this.idArray++
-            const newObjTodo = { name: this.newTodo , isDone: false, id: this.idArray };
-            this.todos.unshift(newObjTodo);
-            this.newTodo = '';
+            if(this.newTodo.trim() != ''){
+                this.idArray++
+                const newObjTodo = { name: this.newTodo , isDone: false, id: this.idArray };
+                this.todos.unshift(newObjTodo).strim;
+                this.newTodo = '';
+            }
         },
         toggle(element){
             // this.todos[index].isDone = true;

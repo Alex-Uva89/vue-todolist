@@ -26,7 +26,7 @@
             <ul class="todo-output-container">
                 <li v-for="(element, index) in todos" class="todo-item">
                     <div @click="toggle(element)" :class="element.isDone ? 'check' : ''" class="todo"> {{ todos[index].id +' - '+ todos[index].name }} </div>
-                    <button @click="delteTodo(element)" class="delete-output">x</button>
+                    <button @click="delteTodo(index)" class="delete-output">x</button>
                 </li>
             </ul>
         </div>
