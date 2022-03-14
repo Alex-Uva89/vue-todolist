@@ -33,18 +33,21 @@
 
 .todo-output-container{
     max-width: 700px;
-    height: 2rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgb(180, 178, 178);
-    border: 1px solid white;
     border-radius: .5rem;
 }
 
 .todo-output-container:hover{
     background-color: gray;
+}
+
+.todo-item{
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
 }
 
 .todo{
@@ -53,5 +56,9 @@
 
 
 .delete-output{
+    font-size: 1rem;
     margin-right: 20px;
+    padding: .3rem;
+    background-color: transparent;
+    border: none;
 }

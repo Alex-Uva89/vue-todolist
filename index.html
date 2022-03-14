@@ -12,18 +12,20 @@
 <body>
     <div id="js-root">
         <div class="todo-input-container">
-            <input type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo">
+            <input type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo" size="1">
             <button class="todo-btn">Aggiugngi</button>
         </div>
 
-        <div class="todo-output-container">
-            <div class="todo">ciao</div>
-            <div class="delete-output">x</div>
-        </div>
+        <ul class="todo-output-container">
+            <li  v-for="(element, index) in todos" class="todo-item">
+                <div class="todo"> {{ todos[index].name }} </div>
+                <button class="delete-output">x</button>
+            </li>
+        </ul>
 
     </div>
     
-
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </body>
 </html>
