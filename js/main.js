@@ -15,7 +15,9 @@ const app = new Vue({
             this.todos.splice(element, 1);
         },
         addTodo(){
-            this.todos.push(newTodo);
+            this.newTodo
+            this.todos.unshift(this.newTodo);
+            this.newTodo = '';
         }
     }
 
