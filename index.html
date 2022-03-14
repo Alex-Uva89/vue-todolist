@@ -11,15 +11,16 @@
 </head>
 <body>
     <div id="js-root">
+
         <div class="todo-input-container">
-            <input v-model="newTodo"  type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo" size="1">
-            <button @click="addTodo" class="todo-btn">Aggiugngi</button>
+            <input v-model="newTodo" type="text" name="todo-input" id="js-todo-input" class="todo-input" placeholder="Inserisci Todo" size="1">
+            <button @click="addTodo()" class="todo-btn">Aggiugngi</button>
         </div>
 
         <ul class="todo-output-container">
-            <li  v-for="(element, index) in todos" class="todo-item">
+            <li v-for="(element, index) in todos" class="todo-item">
                 <div class="todo"> {{ todos[index].name }} </div>
-                <button @click="deleteTodo(element)" class="delete-output">x</button>
+                <button @click="delteTodo(element)" class="delete-output">x</button>
             </li>
         </ul>
 
