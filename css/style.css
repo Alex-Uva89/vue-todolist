@@ -5,6 +5,8 @@
 }
 
 .head-title{
+    max-width: 500px;
+    margin: 0 auto;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -49,12 +51,14 @@
 }
 
 .container-decor{
-    width: 800px;
+    max-width: 800px;
     min-height: calc(100vh - 8rem);
     margin: 0 auto;
     padding: 20px;
     background-image: url(../img/free-texture-fogli-block-notes-L-TYuCTr.jpg);
     background-size: cover;
+    box-shadow: inset 0 0 5px black;
+    border: 1px solid white;
     border-radius: 1rem;
 }
 
@@ -72,7 +76,7 @@
 }
 
 .todo-item{
-    width: 90%;
+    max-width: 90%;
     height: 2rem;
     margin: 0 auto 5px;
     display: flex;
@@ -99,3 +103,10 @@
 .check{
     text-decoration: line-through;
 }
+
+@media screen and (max-width: 430px) {
+    .title{
+        font-size: 2rem;
+    }
+}
+    
